@@ -29,7 +29,7 @@ const Display = ({ contract, account }) => {
               key={i}
               src={`https://gateway.pinata.cloud/ipfs/${item.substring(6)}`}
               alt="new"
-              className="image-list"
+              className="h-[400px] w-[300px] rounded-xl"
             ></img>
           </a>
         );
@@ -41,15 +41,18 @@ const Display = ({ contract, account }) => {
   };
   return (
     <>
-      <div className="image-list">{data}</div>
+      
+      <div className="w-[400px] flex items-center gap-2">
       <input
         type="text"
         placeholder="Enter Address"
-        className="address"
+        className="address  p-2 pl-3 my-4 rounded-lg w-[300px]"
       ></input>
-      <button className="center button" onClick={getdata}>
+      <button className="bg-violet-500 h-10 px-3 rounded-xl" onClick={getdata}>
         Get Data
       </button>
+      </div>
+      <div className="flex flex-col md:flex-row   lg:flex-row flex-wrap  justify-center gap-3 ">{data}</div>
     </>
   );
 };
