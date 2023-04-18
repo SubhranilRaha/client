@@ -18,6 +18,7 @@ const Display = ({ contract, account }) => {
     const isEmpty = Object.keys(dataArray).length === 0;
 
     if (!isEmpty) {
+      console.log("got data!")
       const str = dataArray.toString();
       const str_array = str.split(",");
       // console.log(str);
@@ -46,7 +47,7 @@ const Display = ({ contract, account }) => {
       <input
         type="text"
         placeholder="Enter Address"
-        className="address  p-2 pl-3 my-4 rounded-lg w-[300px]"
+        className="address  p-2 pl-3 my-4 rounded-lg w-[300px] text-black"
       ></input>
       <button className="bg-violet-500 h-10 px-3 rounded-xl" onClick={getdata}>
         Get Data

@@ -62,11 +62,11 @@ function App() {
                 {account ? account : "Not connected"}
               </span>
             </p>
-            {/* {!modalOpen && (
-        <button className="absolute left-0 top-10 text-violet-500 text-sm py-3 px-6 bg-white rounded-lg hover:cursor-pointer hover:scale-105 text-center " onClick={() => setModalOpen(true)}>
+            {!modalOpen && (
+        <button className="absolute left-5 top-5 text-violet-500 text-sm py-3 px-6 bg-white rounded-lg hover:cursor-pointer hover:scale-105 text-center " onClick={() => setModalOpen(true)}>
           Share
         </button>
-      )} */}
+      )}
             {modalOpen && (
               <Modal setModalOpen={setModalOpen} contract={contract}></Modal>
             )}

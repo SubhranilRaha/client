@@ -24,32 +24,35 @@ const Modal = ({ setModalOpen, contract }) => {
   }, [contract]);
   return (
     <>
-      <div className="w-[400px] backdrop-blur-sm bg-[#ffffff33] p-5 rounded-xl mb-3 absolute left-0 top-10">
-        <div className="modalContainer flex flex-col gap-3">
-          <div className="font-bold">Share With :</div>
-          <div className="text-gray-500">
+      <div className="h-full w-[500px] p-3 bg-purple-400 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-20 border border-gray-100 mb-5
+">
+        <div className="modalContainer">
+          <div className="title text-2xl font-bold">Share with : </div>
+          <div className="body py-3">
             <input
               type="text"
-              className="w-full p-1 pl-3 rounded-lg"
+              className="address text-black w-full pl-2 rounded-lg"
               placeholder="Enter Address"
             ></input>
           </div>
           {/* <form id="myForm">
             <select id="selectNumber">
-              <option className="address">People With Access</option>
+              <option className="address text-black font-black">People With Access</option>
             </select>
           </form> */}
-          <div className="flex justify-end">
+          <div className="footer flex gap-5 w-full justify-end pr-3">
             <button
               onClick={() => {
                 setModalOpen(false);
               }}
               id="cancelBtn"
-              className="font-bold absolute right-5 top-2"
+              className="border rounded-lg py-1 px-2"
             >
-              X
+              Cancel
             </button>
-            <button className="text-white text-sm p-2  bg-purple-500 rounded-lg hover:cursor-pointer hover:scale-105 text-center" onClick={() => sharing()}>Share</button>
+            <button 
+            className="border rounded-lg py-1 px-3"
+            onClick={() => sharing()}>Share</button>
           </div>
         </div>
       </div>
